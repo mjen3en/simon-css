@@ -2,10 +2,10 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
-import { Login } from './login/login';
-import { Play } from './play/play';
-import { Scores } from './scores/scores';
-import { About } from './about/about';
+import { Login } from './login/login.jsx';
+import { Play } from './play/play.jsx';
+import { Scores } from './scores/scores.jsx';
+import { About } from './about/about.jsx';
 
 export default function App() {
     return (
@@ -19,7 +19,7 @@ export default function App() {
             <menu className="navbar-nav">
               <li className="nav-item">
                 <NavLink className="nav-link" to="">
-                  Home
+                  Login
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -41,12 +41,6 @@ export default function App() {
           </nav>
         </header>
   
-        <main>App components go here</main>
-
-        <main>App components go here</main>
-
-// to
-
 <Routes>
  <Route path='/' element={<Login />} exact />
  <Route path='/play' element={<Play />} />
@@ -54,6 +48,10 @@ export default function App() {
  <Route path='/about' element={<About />} />
  <Route path='*' element={<NotFound />} />
 </Routes>
+
+
+
+
   
         <footer className="bg-dark text-white-50">
           <div className="container-fluid">
